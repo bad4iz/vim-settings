@@ -70,6 +70,7 @@ map <c-[> <Esc>
 nnoremap <c-х> <Esc>
 
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap \e :e ~/.ideavimrc<CR>
 
 "" Убираем стрелки из доступа
 noremap <Up> <Nop>
@@ -132,3 +133,25 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
+
+map <leader>h :action PreviousTab<CR>
+map <leader>l :action NextTab<CR>
+
+"" mouse actions
+
+"" goto
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nmap gi :action GotoImplementation<CR>
+nmap gd :action GotoDeclaration<CR>
+
+"" split tab
+nmap <c-\> :action MoveTabRight<CR>
+nmap <c--> :action MoveTabDown<CR>
+nmap <c-=> :action Unsplit<CR>
+nmap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+"" MoveEditorToOppositeTabGroup<CR>
+
+"" view Mode 
+nnoremap <leader>vd :action ToggleDistractionFreeMode<CR>
+nnoremap <leader>vz :action ToggleZenMode<CR>
