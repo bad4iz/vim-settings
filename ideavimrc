@@ -82,10 +82,29 @@ let mapleader=" "
 
 
 """ Plugins  --------------------------------
+Plug 'preservim/nerdtree'
 
 
 
 """ Common settings -------------------------
+""" Plugins settings -------------------------
+
+""  NERDTree
+map <c-n> :NERDTree<CR>
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+"" A   - дерево на всю ширину
+"" C-j - next sibling
+"" C-k - prev sibling
+"" J   - last
+"" K   - first
+"" p   - parent
+"" O   - recursive open
+"" go  - open for view
+"" o   - open file
+"" i   - open file in horizontal split
+"" s   - open file in vertical split
+
 
 """ Idea specific settings ------------------
 
@@ -99,3 +118,17 @@ inoremap <c-k> <Up>
 inoremap <c-j> <Down>
 inoremap <c-h> <Left>
 inoremap <c-l> <Right>
+
+""""""""""""""""""""""""""""""""""""""   text   """""""""""""""""""""""""""""""""""""
+noremap <leader>w v:action EditorSelectWord<CR>
+vnoremap <leader>w :action EditorSelectWord<CR>
+
+
+""""""""""""""""""""""""""""" Windows Navigation """""""""""""""""""""""""""""""
+"" tab navigation
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
