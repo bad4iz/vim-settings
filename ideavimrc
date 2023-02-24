@@ -64,7 +64,7 @@ map Ь M
 map Б <
 map Ю >
 map Ё /|
-map х [
+noremap х [
 
 map <c-[> <Esc>
 nnoremap <c-х> <Esc>
@@ -94,3 +94,8 @@ let mapleader=" "
 set clipboard+=unnamed
 set clipboard+=ideaput
 
+"" Navigation insert mode
+inoremap <c-k> <Up>
+inoremap <c-j> <Down>
+inoremap <c-h> <Left>
+inoremap <c-l> <Right>
