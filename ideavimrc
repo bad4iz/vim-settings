@@ -1,73 +1,4 @@
-map й q
-map й q
-map ц w
-map у e
-map к r
-map е t
-map н y
-map г u
-map ш i
-map щ o
-map з p
-map ъ ]
-map ф a
-map ы s
-map в d
-map а f
-map п g
-map р h
-map о j
-map л k
-map д l
-map ж ;
-map э '
-map ё \
-map я z
-map ч x
-map с c
-map м v
-map и b
-map т n
-map ь m
-map б ,
-map ю .
-map Й Q
-map Ц W
-map У E
-map К R
-map Е T
-map Н Y
-map Г U
-map Ш I
-map Щ O
-map З P
-map Х {
-map Ъ }
-map Ф A
-map Ы S
-map В D
-map А F
-map П G
-map Р H
-map О J
-map Л K
-map Д L
-map Ж :
-map Э "
-map Я Z
-map Ч X
-map С C
-map М V
-map И B
-map Т N
-map Ь M
-map Б <
-map Ю >
-map Ё /|
-noremap х [
-
-map <c-[> <Esc>
-nnoremap <c-х> <Esc>
+nnoremap <c-c> <Esc>
 
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 nnoremap \e :e ~/.ideavimrc<CR>
@@ -81,9 +12,13 @@ noremap <Right> <Nop>
 """ Map leader to space ---------------------
 let mapleader=" "
 
-
 """ Plugins  --------------------------------
 Plug 'preservim/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-commentary'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'machakann/vim-highlightedyank'
 
 
 
@@ -108,7 +43,14 @@ let g:NERDTreeMapJumpParent='h'
 
 
 """ Idea specific settings ------------------
-
+set ideajoin
+set incsearch
+set ignorecase
+set relativenumber
+set keep-english-in-normal-and-restore-in-insert
+set keep-english-in-normal
+set scrolloff=999
+set visualbell
 
 """ Настроки буфера обмена он же регистр  ----------------
 set clipboard+=unnamed
@@ -155,3 +97,8 @@ nmap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 "" view Mode 
 nnoremap <leader>vd :action ToggleDistractionFreeMode<CR>
 nnoremap <leader>vz :action ToggleZenMode<CR>
+
+
+
+
+
