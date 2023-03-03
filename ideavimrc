@@ -177,3 +177,7 @@ map <leader>nt :action NewTypeScriptFile<CR>
 noremap <leader>w v:action EditorSelectWord<CR>
 vnoremap <leader>w :action EditorSelectWord<CR>
 map <C-a> <esc>ggVG<CR>
+
+map <leader>r <Action>(RenameElement)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
