@@ -90,6 +90,7 @@ Plugin 'tpope/vim-surround'
 
 
 """ Common settings -------------------------
+set idearefactormode=keep
 """ Plugins settings -------------------------
 
 ""  NERDTree
@@ -143,8 +144,13 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 
-map <leader>h :action PreviousTab<CR>
-map <leader>l :action NextTab<CR>
+map <s-h> :action PreviousTab<CR>
+map <s-l> :action NextTab<CR>
+
+"" window  IdeaVim.ReloadVimRc.reload
+map <leader>e :action EditSourceInNewWindow<CR>
+map <leader>h :action NextWindow<CR>
+map cw :action HideActiveWindow<CR>
 
 "" mouse actions
 map <leader>/ :action ShowErrorDescription<CR>
@@ -169,7 +175,7 @@ nnoremap <leader>vz :action ToggleZenMode<CR>
 
 """ new files
 map <leader>nt :action NewTypeScriptFile<CR>
-
+map <leader>nd :action NewDir<CR>
 "" RenameElement
 
 """"""""""""""""""""""""""""""""""""""   text   """""""""""""""""""""""""""""""""""""
